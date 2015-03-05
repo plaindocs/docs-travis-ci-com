@@ -2,4 +2,3 @@ language: ruby
 sudo: false
 rvm:
   - 2.1.0
-script: htmlproof --disable-external --checks-to-ignore ImageCheck --href-ignore blog ./_site
