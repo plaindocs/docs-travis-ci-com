@@ -7,7 +7,7 @@ permalink: /user/languages/go/
 ### What This Guide Covers
 
 This guide covers build environment and configuration topics specific to Go projects. Please make sure to read our
-[Getting Started](/user/getting-started/) and [general build configuration](/user/build-configuration/) guides first.
+[Getting Started](/user/getting-started/) and [general build configuration](/user/customizing-the-build/) guides first.
 
 ## CI environment for Go Projects
 
@@ -52,7 +52,7 @@ It is also possible to specify a list of operations, for example, to `go get` re
       - go get github.com/bmizerany/assert
       - go get github.com/mrb/hob
 
-See [general build configuration guide](/user/build-configuration/) to learn more.
+See [general build configuration guide](/user/customizing-the-build/) to learn more.
 
 ### `godep` support
 
@@ -120,7 +120,7 @@ Projects that find this sufficient can use a very minimalistic .travis.yml file:
 
     language: go
 
-This can be overridden as described in the [general build configuration](/user/build-configuration/) guide. For example,
+This can be overridden as described in the [general build configuration](/user/customizing-the-build/) guide. For example,
 to omit the `-v` flag, override the `script:` key in `.travis.yml` like this:
 
     script: go test ./...
