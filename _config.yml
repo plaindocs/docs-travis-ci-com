@@ -6,6 +6,7 @@ syntax-highlighting:
   enabled: true
 kramdown:
   hard_wrap: false
+  toc_levels: "2"
   input: GFM
   smart_quotes:   lsquo,rsquo,ldquo,rdquo
 gems:
