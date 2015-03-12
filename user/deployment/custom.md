@@ -4,7 +4,7 @@ layout: en
 permalink: /user/deployment/custom/
 ---
 
-You can easily deploy to your own server the way you would deploy from your local machine by adding a custom [`after_success`](/user/build-configuration/#Define-custom-build-lifecycle-commands) step.
+You can easily deploy to your own server the way you would deploy from your local machine by adding a custom [`after_success`](/user/customizing-the-build/#the-build-lifecycle) step.
 
 ### FTP
 
@@ -29,4 +29,4 @@ This should also work with services you can deploy to via git.
       - git remote add deploy DEPLOY_REPO_URI_GOES_HERE
       - git push deploy
 
-See ["How can I encrypt files that include sensitive data?"](/user/travis-pro/#How-can-I-encrypt-files-that-include-sensitive-data%3F) if you don't want to commit the private key unencrypted to your repository.
+See ["How can I encrypt files that include sensitive data?"](/user/travis-pro/#how-can-i-encrypt-files-that-include-sensitive-data) if you don't want to commit the private key unencrypted to your repository.

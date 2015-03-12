@@ -11,7 +11,7 @@ to encrypt information which you will want to put into the `.travis.yml` file an
 still keep it private. Currently we allow encryption of
 [environment variables](/user/environment-variables/), notification settings, and deploy api keys.
 
-**Please note that encrypted environment variables are not available for [pull requests from forks](/user/pull-requests#Security-Restrictions-when-testing-Pull-Requests).**
+**Please note that encrypted environment variables are not available for [pull requests from forks](/user/pull-requests#security-restrictions-when-testing-pull-requests).**
 
 ## Usage
 
@@ -36,7 +36,7 @@ Please note that the name of the environment variable and its value are both enc
 You may add multiple entries to your .travis.yml with key "secure." They will all be available to your program.
 
 Encrypted values can be used in
-[secure environment variables in the build matrix](/user/environment-variables#In-the-.travis.yml)
+[secure environment variables in the build matrix](/user/environment-variables#in-the-travisyml)
 and [notifications](/user/notifications).
 
 ### Note on escaping certain symbols

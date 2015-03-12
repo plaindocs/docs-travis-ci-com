@@ -61,7 +61,7 @@ install:
 	- bundle install --path vendor/bundle
 ```
 
-When one of the steps fails, the build stops immediately and is marked as [errored](#Breaking-the-Build).
+When one of the steps fails, the build stops immediately and is marked as [errored](#breaking-the-build).
 
 ## Customizing the Build Step
 
@@ -127,7 +127,7 @@ before_install:
 	- sudo apt-get install -qq [packages list]
 ```
 
-> Note that this feature is not available for builds that are running on [Container-based workers](/user/ci-environment/#Virtualization-environments)
+> Note that this feature is not available for builds that are running on [Container-based workers](/user/ci-environment/#virtualization-environments)
 
 All virtual machines are snapshotted and returned to their intial state after each build. 
 

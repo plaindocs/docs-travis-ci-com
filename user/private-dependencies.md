@@ -12,14 +12,14 @@ If the dependency is also on GitHub, there are four different ways of being able
 
  Authentication                | Protocol | Gives access to              | Notes
 -------------------------------|----------|------------------------------|--------------------------------------
- **[Deploy Key](#Deploy-Key)** | SSH      | single repository            | used by default for main repository
- **[User Key](#User-Key)**     | SSH      | all repos user has access to | **recommended** for dependencies
- **[Password](#Password)**     | HTTPS    | all repos user has access to | password can be encrypted
- **[API token](#API-Token)**   | HTTPS    | all repos user has access to | token can be encrypted
+ **[Deploy Key](#deploy-key)** | SSH      | single repository            | used by default for main repository
+ **[User Key](#user-key)**     | SSH      | all repos user has access to | **recommended** for dependencies
+ **[Password](#password)**     | HTTPS    | all repos user has access to | password can be encrypted
+ **[API token](#api-token)**   | HTTPS    | all repos user has access to | token can be encrypted
 
 For the SSH protocol, dependency URLs need to have the format of `git@github.com/…` whereas for the HTTPS protocol, they need to start with `https://…`.
 
-You can use a [dedicated CI user account](#Dedicated-User-Account) for all but the deploy key approach. This will allow you to limit the access to a well defined list of repositories and read access only.
+You can use a [dedicated CI user account](#dedicated-user-account) for all but the deploy key approach. This will allow you to limit the access to a well defined list of repositories and read access only.
 
 ## Deploy Key
 
@@ -31,7 +31,7 @@ GitHub allows to set up SSH keys for a repository. These deploy keys have some g
 
 However, using deploy keys is complicated by the fact that GitHub does not allow you to reuse keys. So a single private key cannot access multiple GitHub repositories.
 
-You could include a different private key for every dependency in the repository, possibly [encrypting them](/user/encrypting-files). Maintaining complex dependency graphs this way can be complex and hard to maintain. For that reason, we recommend using a [user key](#User-Key) instead.
+You could include a different private key for every dependency in the repository, possibly [encrypting them](/user/encrypting-files). Maintaining complex dependency graphs this way can be complex and hard to maintain. For that reason, we recommend using a [user key](#user-key) instead.
 
 ## User Key
 
@@ -39,7 +39,7 @@ You could include a different private key for every dependency in the repository
 
 You can add SSH keys to user accounts on GitHub. Most users have probably already done this to be able to clone the repositories locally.
 
-This way, a single key can access multiple repositories. To limit the list of repositories and type of access, it is recommended to create a [dedicated CI user account](#Dedicated-User-Account).
+This way, a single key can access multiple repositories. To limit the list of repositories and type of access, it is recommended to create a [dedicated CI user account](#dedicated-user-account).
 
 ### Using an existing key
 
@@ -73,7 +73,7 @@ Assumptions:
 * The repository you are running the builds for is called "myorg/main" and depends on "myorg/lib1" and "myorg/lib2".
 * You know the credentials for a user account that has at least read access to all three repositories.
 
-The `travis` command line tool can generate a new key for you and set it up on both Travis CI and GitHub. In order to do so, it will ask you for a GitHub user name and password This is very handy if you have just created a [dedicated user](#Dedicated-User-Account) or if you don't have a key set up on your machine that you want to use.
+The `travis` command line tool can generate a new key for you and set it up on both Travis CI and GitHub. In order to do so, it will ask you for a GitHub user name and password This is very handy if you have just created a [dedicated user](#dedicated-user-account) or if you don't have a key set up on your machine that you want to use.
 
 The credentials will only be used to access GitHub and will not be stored or shared with any other service.
 
@@ -209,7 +209,7 @@ Assumptions:
 * The repository you are running the builds for is called "myorg/main" and depends on "myorg/lib1" and "myorg/lib2".
 * You know the credentials for a user account that has at least read access to all three repositories.
 
-This approach works just like the [password](#Password) approach outlined above, except instead of the username/password pair, you use a GitHub API token.
+This approach works just like the [password](#password) approach outlined above, except instead of the username/password pair, you use a GitHub API token.
 
 Under the GitHub account settings for the user you want to use, navigate to [Applications](https://github.com/settings/applications) and generate a "personal access tokens". Make sure the token has the "repo" scope.
 

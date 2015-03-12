@@ -169,7 +169,7 @@ Language-specific workers have multiple runtimes for their respective language (
 
 ### Environment variables
 
-There is a [list of default environment variables](/user/environment-variables#Default-Environment-Variables) available in each build environment. 
+There is a [list of default environment variables](/user/environment-variables#default-environment-variables) available in each build environment. 
 
 ### Libraries
 

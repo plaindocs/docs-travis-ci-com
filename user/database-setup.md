@@ -4,23 +4,23 @@ layout: en
 permalink: /user/database-setup/
 ---
 
-This guide covers setting up the most popular databases and other services in the Travis CI environemnt. Looking for information on [configuring multiple databases?](/user/database-setup/#Multiple-database-systems).
+This guide covers setting up the most popular databases and other services in the Travis CI environemnt. Looking for information on [configuring multiple databases?](/user/database-setup/#multiple-database-systems).
 
 The following services are available, all of them use default settings, with the exception of some added users and relaxed security settings:
 
-* [MySQL](#MySQL)
-* [SQLite3](#SQLite3)
-* [PostgreSQL](#PostgreSQL)
-* [MongoDB](#MongoDB)
-* [CouchDB](#CouchDB)
-* [Redis](#Redis)
-* [Riak](#Riak)
-* [RabbitMQ](#RabbitMQ)
-* [Memcached](#Memcached)
-* [Cassandra](#Cassandra)
-* [Neo4J](#Neo4J)
-* [ElasticSearch](#ElasticSearch)
-* [Kestrel](#Kestrel)
+* [MySQL](#mysql)
+* [SQLite3](#sqlite3)
+* [PostgreSQL](#postgresql)
+* [MongoDB](#mongodb)
+* [CouchDB](#couchdb)
+* [Redis](#redis)
+* [Riak](#riak)
+* [RabbitMQ](#rabbitmq)
+* [Memcached](#memcached)
+* [Cassandra](#cassandra)
+* [Neo4J](#neo4j)
+* [ElasticSearch](#elasticsearch)
+* [Kestrel](#kestrel)
 
 
 ## Starting Services
@@ -211,7 +211,7 @@ before_install:
   - wget http://www.us.apache.org/dist/cassandra/1.2.18/apache-cassandra-1.2.18-bin.tar.gz && tar -xvzf apache-cassandra-1.2.18-bin.tar.gz && sudo sh apache-cassandra-1.2.18/bin/cassandra
 ```
 
-> `sudo` is not available on [Container-based workers](/user/ci-environment/#Virtualization-environments).
+> `sudo` is not available on [Container-based workers](/user/ci-environment/#virtualization-environments).
 
 ### Neo4J
 
@@ -241,7 +241,7 @@ You can overwrite the installed ElasticSearch with the version you need (e.g., 1
 before_install:
   - wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.2.4.deb && sudo dpkg -i --force-confnew elasticsearch-1.2.4.deb
 ```
-> `sudo` is not available on [Container-based workers](/user/ci-environment/#Virtualization-environments).
+> `sudo` is not available on [Container-based workers](/user/ci-environment/#virtualization-environments).
 
 #### Garbled Output
 
@@ -274,7 +274,7 @@ Use the `DB` environment variable to specify the name of the database configurat
 
     $ DB=postgres [commands to run your tests]
 
-On Travis CI you want to create a [build matrix](/user/customizing-the-build/#Build-Matrix) of three builds each having the `DB` variable exported with a different value, and for that you can use the `env` option in `.travis.yml`:
+On Travis CI you want to create a [build matrix](/user/customizing-the-build/#build-matrix) of three builds each having the `DB` variable exported with a different value, and for that you can use the `env` option in `.travis.yml`:
 
     env:
       - DB=sqlite

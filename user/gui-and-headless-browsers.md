@@ -6,7 +6,7 @@ permalink: /user/gui-and-headless-browsers/
 
 ## What This Guide Covers
 
-This guide covers headless GUI & browser testing using tools provided by the Travis [CI environment](/user/ci-environment/). Most of the content is technology-neutral and does not cover all the details of specific testing tools (like Poltergeist or Capybara). We recommend you start with the [Getting Started](/user/getting-started/) and [Build Configuration](/user/build-configuration/) guides before reading this one.
+This guide covers headless GUI & browser testing using tools provided by the Travis [CI environment](/user/ci-environment/). Most of the content is technology-neutral and does not cover all the details of specific testing tools (like Poltergeist or Capybara). We recommend you start with the [Getting Started](/user/getting-started/) and [Build Configuration](/user/customizing-the-build/) guides before reading this one.
 
 ## Using Sauce Labs
 
@@ -84,9 +84,7 @@ Add a `before_script` to start a server, for example:
 
 If you need web server to be listening on port 80, remember to use `sudo` (Linux will not allow non-privileged process to bind to port 80). For ports greater than 1024, using `sudo` is not necessary (and not recommended).
 
-<div class="note-box">
-Note that <code>sudo</code> is not available for builds that are running on the <a href="/user/workers/container-based-infrastructure">container-based workers</a>.
-</div>
+> Note that `sudo` is not available for builds that are running on the [container-based workers](/user/ci-environment#virtualization-environments)
 
 
 ## Using PhantomJS

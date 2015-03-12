@@ -17,7 +17,7 @@ Learn how to configure your repository to use Travis CI here.
 
 * [Getting Started](/user/getting-started)
 * [Validating .travis.yml files](/user/travis-lint) 
-* [Configuring your build](/user/build-configuration)
+* [Configuring your build](/user/customizing-the-build)
 
 ### Language-specific Guides
 

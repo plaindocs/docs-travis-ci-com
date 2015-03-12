@@ -9,22 +9,22 @@ A common way to customize the build process is to use environment variables, whi
 * TOC
 {:toc}
 
-* Variables defined in [.travis.yml](#Defining-Variables-in-.travis.yml) are tied to a certain commit. Changing them requires a new commit, restarting an old build uses the old values. They are also available automatically on forks of the repository. Define variables in `.travis.yml` that:
+* Variables defined in [.travis.yml](#defining-variables-in-travisyml) are tied to a certain commit. Changing them requires a new commit, restarting an old build uses the old values. They are also available automatically on forks of the repository. Define variables in `.travis.yml` that:
 
 	+ are needed for the build to run and that don't contain sensitive data. For instance, a test suite for a Ruby application might require `$RACK_ENV` to be set to `test`.
 	+ differ per branch.
 	+ differ per job.
 
-* Variables defined in [repository settings](#Defining-Variables-in-Repository-Settings) are the same for all builds. When you restart an old build, it uses the latest values. These variables are not automatically available to forks. Define variables in the Repository Settings that:
+* Variables defined in [repository settings](#defining-variables-in-repository-settings) are the same for all builds. When you restart an old build, it uses the latest values. These variables are not automatically available to forks. Define variables in the Repository Settings that:
 
 	+ differ per repository.
 	+ contain sensitive data, such as third-party credentials.
 
-* Use [Encrypted variables](#Encrypted-Variables) for sensitive data such as authentication tokens.
+* Use [Encrypted variables](#encrypted-variables) for sensitive data such as authentication tokens.
 
 > If you define a variable with the same name in `.travis.yml` and in the Repository Settings, the one in `.travis.yml` takes precedence. If you define a variable as both encrypted and unencrypted, the one defined later in the file takes precedence.
 
-There is also a [complete list of default environment variables](#Default-Environment-Variables) which are present in all Travis CI environments.
+There is also a [complete list of default environment variables](#default-environment-variables) which are present in all Travis CI environments.
 
 ## Defining Variables in .travis.yml
 
@@ -84,7 +84,7 @@ To define variables in Repository Settings, make sure you're logged in, navigate
   <figcaption>Environment Variables in the Repository Settings</figcaption>
 </figure>
 
-By default, the value of these new environment variables is hidden from the `export` line in the logs. This corresponds to the behavior of [encrypted variables](#Encrypted-Variables) in your `.travis.yml`.
+By default, the value of these new environment variables is hidden from the `export` line in the logs. This corresponds to the behavior of [encrypted variables](#encrypted-variables) in your `.travis.yml`.
 
 Similarly, we do not provide these values to untrusted builds, triggered by pull requests from another repository.
 

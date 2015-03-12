@@ -3,10 +3,8 @@ title: APT Package Installation
 layout: en
 permalink: /user/apt-packages/
 ---
-<div id="toc">
-</div>
 
-When using the [container based infrastructure](/user/workers/container-based-infrastructure/), `sudo` is disabled
+When using the [container based infrastructure](/user/ci-environment/#virtualization-environments), `sudo` is disabled
 in user-defined build phases such as `before_install`. This prohibits installation of APT packages via `apt-get`.
 In order to have Travis CI do this on your behalf before `sudo` privilege is removed, use the `addons.apt_packages`
 key, e.g.:

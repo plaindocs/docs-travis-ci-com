@@ -56,7 +56,7 @@ If these apps belong to different Heroku accounts, you will have to do the same 
 
 ### Branch to deploy from
 
-If you have branch specific options, as [shown above](#Application-to-deploy), Travis CI will automatically figure out which branches to deploy from. Otherwise, it will only deploy from your **master** branch.
+If you have branch specific options, as [shown above](#application-to-deploy), Travis CI will automatically figure out which branches to deploy from. Otherwise, it will only deploy from your **master** branch.
 
 You can also explicitly specify the branch to deploy from with the **on** option:
 
@@ -120,7 +120,7 @@ Maybe that is not what you want, as you might generate some artifacts (think ass
 
 ### Buildpack
 
-When deploying via the Anvil strategy (as described [below](#Deploy-Strategy)), you can now set the [buildpack](https://devcenter.heroku.com/articles/buildpacks) to use:
+When deploying via the Anvil strategy (as described [below](#deploy-strategy)), you can now set the [buildpack](https://devcenter.heroku.com/articles/buildpacks) to use:
 
     deploy:
       provider: heroku

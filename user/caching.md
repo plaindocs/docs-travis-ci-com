@@ -4,7 +4,7 @@ layout: en
 permalink: /user/caching/
 ---
 
-The features described here are currently **only available for private repositories on [travis-ci.com](https://travis-ci.com) and our new [container-based infrastructure](http://docs.travis-ci.com/user/workers/container-based-infrastructure/)**. These features are also still experimental, please [contact us](mailto:support@travis-ci.com?subject=Caching) with any questions, issues and feedback.
+The features described here are currently **only available for private repositories on [travis-ci.com](https://travis-ci.com) and our new [container-based infrastructure](/user/ci-environment/#virtualization-environments)**. These features are also still experimental, please [contact us](mailto:support@travis-ci.com?subject=Caching) with any questions, issues and feedback.
 
 * TOC
 {:toc}
@@ -17,7 +17,7 @@ Travis CI can persist directories between builds. This is especially useful for 
 
 On Ruby projects, installing dependencies via [Bundler](http://bundler.io/) can make up a large portion of the build duration. Caching the bundle between builds drastically reduces the time a build takes to run.
 
-The logic for fetching and storing the cache is [described below](#Fetching-and-storing-caches).
+The logic for fetching and storing the cache is [described below](#fetching-and-storing-caches).
 
 #### Enabling Bundler caching
 
@@ -34,13 +34,13 @@ Whenever you update your bundle, Travis CI will also update the cache.
 
 Travis CI tries its best at determining the path bundler uses for storing dependencies.
 
-If you have [custom Bundler arguments](/user/languages/ruby/#Custom-Bundler-arguments-and-Gemfile-locations), and these include the *--path* option, Travis CI will use that path. If *--path* is missing but *--deployment* is present, it will use *vendor/bundle*.
+If you have [custom Bundler arguments](/user/languages/ruby/#custom-bundler-arguments-and-gemfile-locations), and these include the *--path* option, Travis CI will use that path. If *--path* is missing but *--deployment* is present, it will use *vendor/bundle*.
 
 Otherwise it will automatically add the *--path* option. In this case it will either use the value of the environment variable *BUNDLE_PATH* or, if it is missing, *vendor/bundle*.
 
 #### With a custom install step
 
-Bundler caching will not automatically work if you override the install step. You can instead use the [arbitrary directory caching method](#Arbitrary-directories) described below:
+Bundler caching will not automatically work if you override the install step. You can instead use the [arbitrary directory caching method](#arbitrary-directories) described below:
 
     language: ruby
     install: bundle install --without development --deployment --jobs=3 --retry=3
@@ -48,7 +48,7 @@ Bundler caching will not automatically work if you override the install step. Yo
       directories:
       - vendor/bundle
 
-In the above example, you could also omit the install step and instead define [bundler_args](/user/languages/ruby/#Custom-Bundler-arguments-and-Gemfile-locations):
+In the above example, you could also omit the install step and instead define [bundler_args](/user/languages/ruby/#custom-bundler-arguments-and-gemfile-locations):
 
     language: ruby
     bundler_args: --without development --deployment --jobs=3 --retry=3
@@ -90,7 +90,7 @@ this:
 
 CocoaPods caching will not automatically work if you override the install step.
 You can instead use the [arbitrary directory caching
-method](#Arbitrary-directories) described below:
+method](#arbitrary-directories) described below:
 
     language: objective-c
     install: bundle exec pod install
@@ -134,7 +134,7 @@ You can cache arbitrary directories between builds by listing them in your *.tra
 
 As you can see, it is also possible to use environment variables in the directories.
 
-The logic for fetching and storing the cache is [described below](#Fetching-and-storing-caches).
+The logic for fetching and storing the cache is [described below](#fetching-and-storing-caches).
 
 ### Things not to cache
 
@@ -235,7 +235,7 @@ When you want to enable multiple caching features, you can list them as an array
     - bundler
     - apt
 
-This does not when caching [arbitrary directories](#Arbitrary-directories). If you want to combine that with other caching modes, you will have to use a hash map:
+This does not when caching [arbitrary directories](#arbitrary-directories). If you want to combine that with other caching modes, you will have to use a hash map:
 
     cache:
       bundler: true

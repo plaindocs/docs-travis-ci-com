@@ -74,7 +74,7 @@ deploy:
 
 ### Branch to deploy from
 
-If you have branch specific options, as [shown above](#Application-to-deploy), Travis CI will automatically figure out which branches to deploy from. Otherwise, it will only deploy from your **master** branch.
+If you have branch specific options, as [shown above](#application-to-deploy), Travis CI will automatically figure out which branches to deploy from. Otherwise, it will only deploy from your **master** branch.
 
 You can also explicitly specify the branch to deploy from with the **on** option:
 
