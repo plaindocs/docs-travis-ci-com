@@ -11,7 +11,7 @@ This guide covers build environment and configuration topics specific to Clojure
 ## CI Environment for Clojure Projects
 
 Travis CI environment provides a large set of build tools for JVM languages with
-[multiple JDKs, Ant, Gradle, Maven](/user/languages/java/#Overview) and both [Leiningen](http://leiningen.org) 1.7.x and 2.4.x.
+[multiple JDKs, Ant, Gradle, Maven](/user/languages/java/#overview) and both [Leiningen](http://leiningen.org) 1.7.x and 2.4.x.
 
 Clojure projects on Travis CI assume you use Leiningen 2.4.x by default.
 
@@ -82,7 +82,7 @@ Task chaining requires using the `do` task:
 
 ## Testing Against Multiple JDKs
 
-As for any JVM language, it is also possible to [test against multiple JDKs](/user/languages/java/#Testing-Against-Multiple-JDKs).
+As for any JVM language, it is also possible to [test against multiple JDKs](/user/languages/java/#testing-against-multiple-jdks).
 
 ### Examples
 

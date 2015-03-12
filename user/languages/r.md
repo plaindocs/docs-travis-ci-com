@@ -34,9 +34,7 @@ The R environment comes with LaTeX and
 use packages like [RMarkdown](http://rmarkdown.rstudio.com/) or
 [knitr](http://yihui.name/knitr/).
 
-Note that R support in Travis CI currently requires `sudo`, which means it
-can't be used with
-[container-based builds](/user/workers/container-based-infrastructure/).
+> Note that R support in Travis CI requires `sudo` which means it can't be used with [container-based builds](/user/ci-environment/#virtualization-environments).
 
 ## Configuration options
 

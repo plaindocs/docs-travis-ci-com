@@ -10,7 +10,7 @@ This guide covers build environment and configuration topics specific to Scala p
 
 ## Overview
 
-Travis CI environment provides a large set of build tools for JVM languages with [multiple JDKs, Ant, Gradle, Maven](/user/languages/java/#Overview) and [sbt](http://www.scala-sbt.org).
+Travis CI environment provides a large set of build tools for JVM languages with [multiple JDKs, Ant, Gradle, Maven](/user/languages/java/#overview) and [sbt](http://www.scala-sbt.org).
 
 ## Projects using sbt
 
@@ -69,7 +69,7 @@ If your project is not configured for sbt, the build process behaves like a typi
 
 ## Testing Against Multiple JDKs
 
-As for any JVM language, it is also possible to [test against multiple JDKs](/user/languages/java/#Testing-Against-Multiple-JDKs).
+As for any JVM language, it is also possible to [test against multiple JDKs](/user/languages/java/#testing-against-multiple-jdks).
 
 ## Build Matrix
 

@@ -16,7 +16,7 @@ This guide covers build environment and configuration topics specific to Android
 
 ### Overview
 
-Travis CI environment provides a large set of build tools for JVM languages with [multiple JDKs, Ant, Gradle, Maven](/user/languages/java/#overview), [sbt](/user/languages/scala#Projects-using-sbt) and [Leiningen](/user/languages/clojure).
+Travis CI environment provides a large set of build tools for JVM languages with [multiple JDKs, Ant, Gradle, Maven](/user/languages/java/#overview), [sbt](/user/languages/scala#projects-using-sbt) and [Leiningen](/user/languages/clojure).
 
 By setting
 

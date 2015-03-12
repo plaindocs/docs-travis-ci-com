@@ -242,9 +242,7 @@ In your .travis.yml:
        - sudo sed -e "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
        - sudo service apache2 restart
 
-<div class="note-box">
-Note that <code>sudo</code> is not available for builds that are running on the <a href="/user/workers/container-based-infrastructure">container-based workers</a>.
-</div>
+> Note that this feature is not available for builds that are running on the [container-based workers](/user/ci-environment/#virtualization-environments).
 
 You will need to have ``build/travis-ci-apache`` file that will configure your virtual host as usual, the important part for php-fpm is this:
 
@@ -303,7 +301,7 @@ php:
 
 can be used as aliases to `nightly`.
 
-Note that [PECL extensions listed above](#Preinstalled-PHP-extensions) are not installed on nightly builds.
+Note that [PECL extensions listed above](#preinstalled-php-extensions) are not installed on nightly builds.
 If you need these, you need to install them with `pecl`.
 
 ## Build Matrix
