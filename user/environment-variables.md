@@ -6,7 +6,8 @@ permalink: /user/environment-variables/
 
 A common way to customize the build process is to use environment variables, which can be accessed from any stage in your build process.
 
-<div id="toc"></div>
+* TOC
+{:toc}
 
 * Variables defined in [.travis.yml](#Defining-Variables-in-.travis.yml) are tied to a certain commit. Changing them requires a new commit, restarting an old build uses the old values. They are also available automatically on forks of the repository. Define variables in `.travis.yml` that:
 

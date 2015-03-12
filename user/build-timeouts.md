@@ -3,7 +3,8 @@ title: My builds is timing out
 layout: en
 permalink: /user/build-timeouts/
 ---
-<div id="toc"></div>
+* TOC
+{:toc}
 
 Builds can unfortunately time out, either during installation of dependencies, or during the build itself, for instance because of a command that's taking a longer amount of time to run while not producing any output.
 

@@ -4,7 +4,8 @@ layout: en
 permalink: /user/notifications/
 ---
 
-<div id="toc"></div>
+* TOC
+{:toc}
 
 ## Notifications
 

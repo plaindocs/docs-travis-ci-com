@@ -7,7 +7,8 @@ Some builds need more than a set of language libraries, they need extra services
 
 You have full control over the virtual machine your tests are running on, so you can customize it to your needs.
 
-<div id="toc"></div>
+* TOC
+{:toc}
 
 ## Installing Ubuntu packages
 

@@ -4,7 +4,8 @@ permalink: /user/build-hacks/
 layout: en
 ---
 
-<div id="toc"></div>
+* TOC
+{:toc}
 
 ## Update/Downgrade Maven
 

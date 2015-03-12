@@ -9,7 +9,8 @@ permalink: /user/ci-environment/
 This guide explain what packages, tools and settings are available in the Travis
 CI environment (often referred to as "CI environment").
 
-<div id="toc"></div>
+* TOC
+{:toc}
 
 ## Overview
 

@@ -4,7 +4,8 @@ layout: en
 permalink: /user/travis-pro/
 ---
 
-<div id="toc"></div>
+* TOC
+{:toc}
 
 Note: These issues are related to [Travis Pro](http://travis-ci.com), our hosted
 continuous integration solution for private repositories.

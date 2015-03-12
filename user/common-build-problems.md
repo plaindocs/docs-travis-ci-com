@@ -4,7 +4,8 @@ layout: en
 permalink: /user/common-build-problems/
 ---
 
-<div id="toc"></div>
+* TOC
+{:toc}
 
 ## My tests broke but were working yesterday
 
