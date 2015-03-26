@@ -6,7 +6,8 @@ permalink: /user/firefox/
 
 ### Selecting a Firefox version
 
-Our VMs come preinstalled with some recent version of Firefox, currently 31.0esr.
+Our VMs come preinstalled with some recent version of Firefox, currently
+{{ site.data.versions.Firefox}}.
 
 If you need a specific version to be installed, the Firefox addon
 allows you to specify any version of Firefox and the binary will be downloaded
